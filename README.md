@@ -5,9 +5,7 @@ It uses the fabulous plugin Minify (http://code.google.com/p/minify/).
 
 Simple in your templates type:
 
-  <script>
     <link href="<?=Minifier::make(array('//css/main.css'))?>" rel="stylesheet" type="text/css">
-  </script>
 
 OR
 
