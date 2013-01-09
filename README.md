@@ -9,8 +9,6 @@ Simple in your templates type:
 
 OR
 
-  <script>
     <link href="<?=Minifier::make(array('//css/main.css', '//css/main2.css'))?>" rel="stylesheet" type="text/css">
-  </script>
 
 You can do the same thing with JavaScript.
