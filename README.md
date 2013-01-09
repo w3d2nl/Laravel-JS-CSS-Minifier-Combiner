@@ -12,3 +12,5 @@ Or
     <link href="<?=Minifier::make(array('//css/main.css', '//css/main2.css'))?>" rel="stylesheet" type="text/css">
 
 You can do the same thing with JavaScript.
+
+PS: Don't forget to 777 the cache folder in this bundle!
