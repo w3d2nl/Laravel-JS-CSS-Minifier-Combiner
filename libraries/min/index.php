@@ -64,7 +64,7 @@ if (isset($_GET['f']) || isset($_GET['g'])) {
         $min_serveController = new Minify_Controller_MinApp();
     }
     Minify::serve($min_serveController, $min_serveOptions);
-        
+    exit();
 } elseif ($min_enableBuilder) {
     header('Location: builder/');
     exit();
