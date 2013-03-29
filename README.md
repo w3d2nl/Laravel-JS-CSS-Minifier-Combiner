@@ -3,14 +3,28 @@ Laravel JS/CSS Minifier/Combiner
 With this bundle, the Laravel framework can minify your CSS and JS assets, and will cache it until it changes.
 It uses the fabulous plugin Minify (http://code.google.com/p/minify/).
 
-Simple in your templates type:
+For CSS (in your <head>):
 
-    <link href="<?=Minifier::make(array('//css/main.css'))?>" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="<?=Minifier::make(array('//css/main.css'))?>">
 
-Or
+Or for JavaScript (at the end of <body>):
 
-    <link href="<?=Minifier::make(array('//css/main.css', '//css/main2.css'))?>" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="<?=Minifier::make(array('//css/main.css', '//css/main2.css'))?>"></script>
 
-You can do the same thing with JavaScript.
+Here's something you'll want to add to your bundles.php:
 
-PS: Don't forget to 777 the cache folder in this bundle!
+    'minify' => array(
+        'autoloads' => array(
+            'map' => array(
+                'Minifier' => '(:bundle)/minifier.php',
+            )
+        ),
+        'handles' => 'min'
+    )
+
+If your Laravel is in the Document Root (it normally shouldn't) and you're using mod_rewrite instead, 
+you may have trouble getting Minify to work. Try this in your bundles/minify/libraries/min/config.php:
+
+    $min_documentRoot = substr(__FILE__, 0, strrpos(__FILE__, 'bundles')) . 'public_html/';
+
+PS: Don't forget to CHMOD 777 the cache folder in this bundle!
