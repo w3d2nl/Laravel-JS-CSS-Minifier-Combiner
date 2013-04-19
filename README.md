@@ -4,7 +4,7 @@ With this bundle, the Laravel framework can minify your CSS and JS assets, and w
 It uses the fabulous plugin Minify (http://code.google.com/p/minify/).
 
 Install your bundle
-    php artisan bundle:install Laravel-JS-CSS-Minifier-Combiner
+    <code>php artisan bundle:install Laravel-JS-CSS-Minifier-Combiner</code>
 
 For CSS (in your <head>):
 
