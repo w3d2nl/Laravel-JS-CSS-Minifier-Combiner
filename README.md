@@ -3,6 +3,9 @@ Laravel JS/CSS Minifier/Combiner
 With this bundle, the Laravel framework can minify your CSS and JS assets, and will cache it until it changes.
 It uses the fabulous plugin Minify (http://code.google.com/p/minify/).
 
+Install your bundle
+    php artisan bundle:install Laravel-JS-CSS-Minifier-Combiner
+
 For CSS (in your <head>):
 
     <link rel="stylesheet" type="text/css" href="<?=Minifier::make(array('//css/main.css'))?>">
