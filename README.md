@@ -12,7 +12,7 @@ For CSS (in your <head>):
 
 Or for JavaScript (at the end of <body>):
 
-    <script type="text/javascript" src="<?=Minifier::make(array('//css/main.css', '//css/main2.css'))?>"></script>
+    <script type="text/javascript" src="<?=Minifier::make(array('//js/jquery.css', '//js/reveal.js'))?>"></script>
 
 Here's something you'll want to add to your bundles.php:
 
