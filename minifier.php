@@ -13,6 +13,7 @@
 class Minifier
 {
     /**
+     * Create a new min-URL for files or a group.
      * @param  array   $files array of the files to minify and combine
      * @param  boolean Optional parameter to get a group url
      * @return string  The source for combined url
@@ -26,8 +27,8 @@ class Minifier
             if(! is_array( $files ) ) $files = array( $files );
         }
 
-        $uri = Minify_getUri( $files );
-        $uri = str_replace( '/min/', '/min/?', $uri );
+        $uri = Minify_getUri($files);
+        $uri = str_replace('/min/', '/min/?', $uri);
 
         return $uri;
     }
